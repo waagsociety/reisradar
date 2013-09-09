@@ -1,4 +1,4 @@
 reisradar
 =========
 
-Social travelling through CitySDK
+Social travelling through CitySDK.
