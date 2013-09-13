@@ -1,0 +1,109 @@
+@import 'compass';
+
+.titleButton
+{
+	background: transparent;
+	border: none;
+	color: white;
+	padding: .3em .6em;
+
+	margin-bottom: 15px;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.defaultButton
+{
+
+	$leg_color: #669999;
+	background: transparent;
+	border: none;
+	color:$leg_color;
+	padding: .3em .6em;
+
+	margin-bottom: 15px;
+	font-size: 15px;
+	text-decoration: none;
+
+}
+
+.x-button-icon {
+	width: 1.5em;
+	height: 1.5em;
+
+	&:before {
+		font-family: 'Helvetica';
+		font-size: 1.6em;
+		line-height: 1em;
+	}
+}
+
+// Button labels
+.x-button-label {
+	line-height: 1.6em;
+}
+
+.x-iconalign-left .x-button-label {
+	margin-left: .6em;
+}
+.x-iconalign-right .x-button-label {
+	margin-right: .6em;
+}
+
+// Toolbar button styling
+.x-toolbar .x-button {
+	margin: 6px .2em;
+	padding: 0 .6em;
+
+	.x-button-icon {
+		&:before {
+			font-size: 1.3em;
+			line-height: 1.3em;
+		}
+	}
+
+	}
+//tabbar button styling
+.x-tabbar .x-button {
+	margin: 6px .2em;
+	padding: 0 .6em;
+
+	.x-button-icon {
+		&:before {
+			font-size: 1.3em;
+			line-height: 1.3em;
+		}
+	}
+}
+
+//segmented buttons
+.x-segmentedbutton .x-button {
+    	margin: 0;
+	font-size: 1.5em;
+
+        background-color: #CCCCCC;
+
+	$button-radius: 1em;
+	
+        @include border-radius(0);
+
+        &.x-first {
+            @include border-left-radius($button-radius);
+        }
+
+        &.x-last {
+            @include border-right-radius($button-radius);
+        }
+
+    &:not(.x-first) {
+        border-left: 0;
+    }
+}
+
+//pressed segmented buttons
+.x-segmentedbutton .x-button-pressed
+{
+	$route_color: #669999;
+	color: $route_color;
+}
+

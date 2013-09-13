@@ -1,0 +1,42 @@
+@import "global";
+@import "source";
+@import "message";
+
+$rr_header_color: #FFFFFF;/* wit */
+$rr_text_color: #FFFFFF;/* donkergrijs*/
+$rr_text_status_color: #FFFFFF;/*roze*/
+$rr_ruler_color: #FFFFFF;/*blauw*/
+$rr_name_color: #FFFFFF;/*blauw*/
+$rr_tag_color: #B8529E; 
+$rr_mention_color: #FFFFFF;
+$rr_link_color: #FFFFFF;
+$rr_action_color: #FFFFFF;/*wit*/
+$rr_background_color: #B8529E;
+$rr_icon_path:inline-image("../icons/rr_logo.png",png);
+
+div.source_rr
+{
+	@include source-base($rr_header_color,$rr_text_color,$rr_text_status_color,$rr_ruler_color,$rr_name_color,$rr_tag_color,$rr_icon_path,$rr_action_color,$rr_background_color);
+	div.source_header
+	{
+		position: relative;
+		top: 1px;
+		background-color:$rr_header_color;/*starbucks green*/
+		border-top-left-radius:$border_radius;
+		border-top-right-radius:$border_radius;
+		height: .8em;
+		margin: 2px;
+	}
+	
+}
+
+div.messages_rr
+{
+	@include message-base($rr_header_color,$rr_text_color,$rr_text_status_color,$rr_ruler_color,$rr_name_color,$rr_tag_color,$rr_icon_path,$rr_action_color,$rr_background_color);
+	
+	div.comments
+	{
+		background-color: #FFB6C1;
+		color: $rr_background_color;
+	}
+}

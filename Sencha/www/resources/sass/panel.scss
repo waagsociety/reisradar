@@ -1,0 +1,25 @@
+//skin for panel
+//
+.x-panel-inner {
+        background-color: #FFFFFF;
+	background-repeat: no-repeat; 
+	background-position:center center; 
+	background-image: inline-image("../images/background.png",png); 
+	background-size: 80%;
+
+	hr
+	{
+		$leg_color: #669999;
+		border: 1px solid $leg_color;	
+	}
+}
+
+html, body 
+{
+	height: 100%;
+	background-color: #FFFFFF;
+	background-repeat: no-repeat; 
+	background-position:center center; 
+	background-image: inline-image("../images/splash.png",png); 
+	background-size: 80%;
+}

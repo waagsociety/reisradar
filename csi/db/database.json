@@ -1,0 +1,7 @@
+//database credentials for CSI
+{
+	"host": "localhost",
+	"database": "csi",
+	"user": "",
+	"password": ""
+}

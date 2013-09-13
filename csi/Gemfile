@@ -1,0 +1,12 @@
+source "https://rubygems.org"
+
+gem "sinatra", :require => "sinatra/base"
+gem "sequel"
+gem "sinatra-sequel"
+gem "json"
+gem "georuby"
+gem "pg"
+gem "rest-client"
+gem "redis"
+gem "redis-lock"
+gem "twitter"

@@ -1,0 +1,136 @@
+//defines style for source as a mixin
+@import "global";
+@import "route";
+
+@mixin source-base($header_color,$text_color,$text_status_color,$ruler_color,$name_color,$tag_color,$icon_path,$action_color,$background_color) {
+	
+	background-color:$background_color;
+	border-radius:$border_radius;
+	margin-top: $margin_default;
+	margin-bottom: $margin_default / 4;
+	margin-left: $margin_default;
+	margin-right: $margin_default;
+	left:.5em;
+	font-family: "Helvetica";
+	color:$text_color;
+	position: relative;
+
+	
+
+	div.source_header
+	{
+		background-color:$header_color;/*starbucks green*/
+		border-top-left-radius:$border_radius;
+		border-top-right-radius:$border_radius;
+		height: .8em;
+	}
+
+	div.source_status
+	{
+		margin-left: 0;
+		position: relative;
+		div.source_icon
+		{
+			margin-left: $margin_default;
+			background:$icon_path;
+			background-repeat:no-repeat;
+			background-size:$icon_size $icon_size;
+			width:$icon_size;
+			height:$icon_size;
+			position:absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+		div.source_name
+		{
+			font-size: 1.4em;
+			color:$text_status_color;
+			margin-left: $margin_default * 2;
+			margin-right: $margin_default * 1.5;
+			width: 95%;
+			top: .5em;
+			position: relative;
+			height: $icon_size;
+		}
+	}
+
+	hr
+	{
+		display: block; 
+		height: 1px;
+		border: 0; 
+		border-top: 1px solid $ruler_color;/*baby blue*/
+		margin-left: $margin_default;
+		margin-right: $margin_default;
+		padding: 0;
+	}
+
+	div.source_message_preview_main
+	{
+		font-size: 1.2em;
+		margin-left: $margin_default;
+		margin-right: 1em;
+	}
+
+	div.source_message_preview_sub
+	{
+		font-size: 1em;
+		margin-left: $margin_default * 1.3;
+		margin-bottom: $margin_default;
+		padding-bottom: $margin_default;
+	}
+
+	div.source_message_count
+	{
+		position: absolute;
+		right: $margin_default;
+		top: $margin_default * 2;
+		background-color: $text_color;
+		color: $background_color;
+		width: 2em;
+		text-align: center;
+		font-size: .8em;
+		font-style: italic;
+	}
+
+	div.source_arrow
+	{
+		position: absolute;
+		top: 2.7em;
+		left: -1.4em;
+		width: 0;
+		height: 0;
+
+		border-top: 1em solid transparent;
+		border-bottom: 1em solid transparent;
+		border-right: 1.4em solid transparent;
+	}
+
+	div.source_inner_arrow
+	{
+		position: absolute;
+		top: 2.7em;
+		left: -1.35em;
+		width: 0;
+		height: 0;
+
+		border-top: 1em solid transparent;
+		border-bottom: 1em solid transparent;
+		border-right: 1.4em solid $background_color;
+	}
+	
+	div.source_circle
+	{
+		top: 3.2em;
+		left: -2em;
+		width: 0;
+		height: 0;
+		position: absolute;
+		border-radius: $border_radius;
+		width: $border_radius;
+		height: $border_radius;
+		border: solid $route_color;
+		background: $route_color;
+	}
+}

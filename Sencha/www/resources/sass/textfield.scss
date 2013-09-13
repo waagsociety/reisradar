@@ -1,0 +1,65 @@
+//custom skin for textfield
+$form-clear-size: 2.2em;
+$form-field-height: 2.4em;
+
+.x-field {
+    min-height: 40px;
+    width: 98%;
+    border: 1px solid black;
+    &:last-child {
+    }
+}
+
+.x-field-input {
+    .x-clear-icon {
+        background: theme_image('default', "clear_icon.png") no-repeat;
+        background-position: center center;
+        background-size: 55% 55%;
+        width: $form-clear-size;
+        height: $form-clear-size;
+        margin-top: -($form-clear-size/2);
+    }
+}
+
+.x-field-clearable {
+    .x-field-input {
+        padding-right: $form-clear-size;
+    }
+}
+
+.x-input-el {
+    padding: .4em;
+    min-height: $form-field-height;
+    -webkit-appearance: none;
+    border: 1px solid white;
+}
+
+.x-input-text 
+{
+	margin-right: 1em;
+}
+
+.x-ie .x-input-el {
+  background: transparent;
+}
+
+.x-item-disabled {
+  .x-form-label,
+  input,
+  .x-input-el,
+  .x-spinner-body,
+  select,
+  textarea,
+  .x-field-clear-container {
+    color: #b3b3b3;
+    pointer-events: none;
+  }
+}
+
+.x-item-disabled .x-form-label {
+    color: #aaa;
+}
+
+.x-item-disabled .x-form-label:after {
+    color: #666 !important;
+}

@@ -1,0 +1,50 @@
+@import "global";
+@import "source";
+@import "message";
+
+$br_header_color: #FF6633;/* oranje */
+$br_text_color: #000000;/*zwart*/
+$br_text_status_color: #FF6633;/*oranje*/
+$br_ruler_color: #FF6633;/*oranje*/
+$br_name_color: #6B98DA;/*hemels blauw*/
+$br_tag_color: #6B98DA;/*hemels blauw*/
+$br_mention_color: #00B9E9; 
+$br_link_color: gray;
+$br_action_color: #FF6633;/*oranje*/
+$br_icon_path:inline-image("../icons/buienradar.png",png);
+$br_background_color: #FFFFFF;/*wit*/
+
+div.source_buienradar
+{
+	@include source-base($br_header_color,$br_text_color,$br_text_status_color,$br_ruler_color,$br_name_color,$br_tag_color,$br_icon_path,$br_action_color,$br_background_color);
+	
+	border: 1px solid $br_text_status_color;
+	
+	div.source_arrow
+	{
+		position: absolute;
+		top: 2.7em;
+		left: -1.4em;
+		width: 0;
+		height: 0;
+
+		border-top: 1em solid transparent;
+		border-bottom: 1em solid transparent;
+		border-right: 1.4em solid $br_text_status_color;
+	}
+}
+
+div.messages_buienradar
+{
+	@include message-base($br_header_color,$br_text_color,$br_text_status_color,$br_ruler_color,$br_name_color,$br_tag_color,$br_icon_path,$br_action_color,$br_header_color);
+
+	//disable comments on buienradar
+	div.message
+	{
+		div.message_add_comment
+		{
+			display: none;
+		}
+	}
+
+}

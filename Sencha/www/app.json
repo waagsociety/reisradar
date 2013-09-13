@@ -1,0 +1,55 @@
+{
+  "name": "ReisRadar",
+  "indexHtmlPath": "index.html",
+  "url": null,
+  "js": [
+    {
+      "path": "touch/sencha-touch.js",
+      "x-bootstrap": true
+    },
+    {
+      "path": "app.js",
+      "bundle": true,
+      "update": "delta"
+    },
+    {
+      "path": "resources/scripts/moment.js"
+    },
+    {
+      "path": "resources/scripts/perp.js"
+    },
+    {
+      "path": "resources/scripts/md5.js"
+    },
+    {
+      "path": "resources/scripts/leaflet/leaflet.js"
+    }
+  ],
+  "css": [
+    {
+      "path": "resources/css/app.css",
+      "update": "delta"
+    }
+  ],
+  "appCache": {
+    "cache": [
+      "index.html"
+    ],
+    "network": [
+      "*"
+    ],
+    "fallback": []
+  },
+  "resources": [
+    "resources/images",
+    "resources/icons",
+    "resources/startup",
+    "resources/scripts/leaflet/images"
+  ],
+  "ignore": [
+    ".svn$"
+  ],
+  "archivePath": "archive",
+  "requires": [],
+  "id": "0ab869e7-b4ec-4df3-8ea4-aaf96fbb05e1"
+}

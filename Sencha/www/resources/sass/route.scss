@@ -1,0 +1,22 @@
+//style for the route line
+@import 'global';
+
+$route_color: #66CCCC;
+$inactive_color: #669999;
+
+div.route
+{
+	padding: 0;
+	margin: 0;  	
+	padding-right:$margin_default;
+	background: #FAFAFA;
+	position:relative;
+	height: 100%;
+	
+	div.x-scroll-container{
+		border-left:$margin_default / 2 solid $inactive_color;
+		position: relative;
+		padding: 0;
+	}
+
+}

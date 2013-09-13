@@ -1,0 +1,50 @@
+$base-color: #FFFFFF;
+@import 'sencha-touch/base';
+@import 'sencha-touch/base/all';
+@import 'leaflet';
+
+@import "titlebar";
+@import "tabbar";
+@import "button";
+@import "list";
+@import "textfield";
+@import "alert";
+
+@import "title";
+@import "global";
+@import "route";
+@import "leg";
+@import "source";
+@import "message";
+@import "openov";
+@import "twitter";
+@import "buienradar";
+@import "rr";
+@import "ns";
+@import "panel";
+
+@include icon-font('icomoon', inline-font-files(
+'icomoon/icomoon.woff', woff, 
+'icomoon/icomoon.ttf', truetype,
+'icomoon/icomoon.svg', svg
+));
+
+@include icon("list","\e000","icomoon");
+@include icon("balloon", "\e001", "icomoon");
+@include icon("refresh", "\e002", "icomoon");
+@include icon("location", "\e003", "icomoon");
+@include icon("close", "\e004", "icomoon");
+@include icon("disclose", "\e005", "icomoon");
+@include icon("add", "\e006", "icomoon");
+@include icon("check_round", "\e007", "icomoon");
+@include icon("remove", "\e00f", "icomoon");
+@include icon("check", "\e015", "icomoon");
+@include icon("bike", "\e00a", "icomoon");
+@include icon("walk", "\e00b", "icomoon");
+@include icon("train", "\e00c", "icomoon");
+@include icon("car", "\e00d", "icomoon");
+@include icon("bus", "\e00e", "icomoon");
+@include icon("trash", "\e00f", "icomoon");
+@include icon("back", "\e010", "icomoon");
+@include icon("warning", "\e016", "icomoon");
+

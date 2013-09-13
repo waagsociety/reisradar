@@ -1,0 +1,26 @@
+@import "global";
+@import "source";
+@import "message";
+
+//defines style for openov
+$ov_header_color: #3399CC;/* lichtblauw */
+$ov_text_color: #FFFFFF;/*wit*/
+$ov_text_status_color: #FFFFFF;/*oranje*/
+$ov_ruler_color: #3399CC;/*oranje*/
+$ov_name_color: #FFFFFF;/*wit*/
+$ov_tag_color: #FFFFFF;/*wit*/
+$ov_action_color: #FFFFFF;/*wit*/
+$ov_background_color: #006699;/*donker blauw*/
+$ov_icon_path:inline-image("../icons/openov.png",png);
+
+div.source_openov
+{
+	@include source-base($ov_header_color,$ov_text_color,$ov_text_status_color,$ov_ruler_color,$ov_name_color,$ov_tag_color,$ov_icon_path,$ov_action_color,$ov_background_color);
+	
+}
+
+div.messages_openov
+{
+	@include message-base($ov_header_color,$ov_text_color,$ov_text_status_color,$ov_ruler_color,$ov_name_color,$ov_tag_color,$ov_icon_path,$ov_action_color,$ov_background_color);
+
+}

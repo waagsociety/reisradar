@@ -1,0 +1,99 @@
+//defines style for the leg
+@import "global";
+
+div.leg
+{
+	$leg_color: #669999;
+	height: 3.5em; //92px
+	background-color: $leg_color;
+	border-top-right-radius: $border_radius;
+	border-bottom-right-radius: $border_radius;
+	margin-right: -.3em;
+	position: relative;
+	left:-.5em;
+	margin-bottom: 0;
+
+	div.leg_modality
+	{
+		position: absolute;
+		right: 1em;
+		width: 2em;
+		height: 2em;
+		top: .2em;
+
+		svg
+		{
+			path
+			{
+				fill: white;
+				stroke: none;
+			}
+			circle
+			{
+				fill: white;
+				stroke: none;
+			}
+		}
+	}
+
+	div.leg_source
+	{
+		font-size: 1.4em;
+		top: .1em;
+		height: 1.2em;
+		color: white;
+		font-family: "Helvetica";
+		position: absolute;
+		left: .5em;
+		width: 80%;
+	}
+}
+
+div.leg_active
+{
+	@extend div.leg;
+	$leg_color: #6BC9CC;
+	background-color: $leg_color;
+}
+
+div.sources
+{
+	$leg_color: #669999;
+	margin-left:-$margin_default / 2;
+	border-left:$margin_default / 2 solid $leg_color; 
+	height:  100%;
+}
+
+div.sources_active
+{
+	@extend div.sources;
+	$leg_color: #6BC9CC;
+	border-left:$margin_default / 2 solid $leg_color; 
+	margin-top: -$margin_default;
+	padding-top: $margin_default;
+}
+
+div.legspinner
+{
+	$icon_path:inline-image("../icons/ajax-loader.gif",gif);
+	background: $icon_path;
+	background-repeat: no-repeat;
+	background-size: $icon_size $icon_size;
+	width: $icon_size;
+	height: $icon_size;	
+}
+
+div.noconnection
+{
+	//todo replace with other icon
+        background: theme_image('default', "pictos/warning_black.png") no-repeat;
+	background-repeat: no-repeat;
+	background-size: $icon_size $icon_size;
+	width: $icon_size;
+	height: $icon_size;
+}
+
+div.sourceButton
+{
+		margin-bottom: $margin-default * .5;
+}

@@ -1,0 +1,53 @@
+//ns style
+@import "global";
+@import "source";
+@import "message";
+
+$ns_header_color: #333298;/* ns blauw */
+$ns_text_color: #000000;/* zwart */
+$ns_text_status_color: #333298;/* blauw*/
+$ns_ruler_color: #FFFFFF;/*wit*/
+$ns_name_color: #333298;/*blauw*/
+$ns_tag_color: #6B8D85;/*licht blauw*/ 
+$ns_mention_color: #00B9E9;
+$ns_link_color: gray;
+$ns_action_color: #333298;/*wit*/
+$ns_background_color: #FFCC00;/*ns geel*/
+$ns_icon_path:inline-image("../icons/ns.png",png);
+
+div.source_ns
+{
+	@include source-base($ns_header_color,$ns_text_color,$ns_text_status_color,$ns_ruler_color,$ns_name_color,$ns_tag_color,$ns_icon_path,$ns_action_color,$ns_background_color);
+	
+	//border: 1px solid $br_text_status_color;
+	
+	//div.source_arrow
+	//{
+	//	position: absolute;
+	//	top: 2.7em;
+	//	left: -1.4em;
+	//	width: 0;
+	//	height: 0;
+
+	//	border-top: 1em solid transparent;
+	//	border-bottom: 1em solid transparent;
+	//	border-right: 1.4em solid $br_text_status_color;
+	//}
+}
+
+div.messages_ns
+{
+	@include message-base($ns_header_color,$ns_text_color,$ns_text_status_color,$ns_ruler_color,$ns_name_color,$ns_tag_color,$ns_icon_path,$ns_action_color,$ns_header_color);
+
+	div.comments
+	{
+		svg
+		{
+			polyline	
+			{
+				stroke: #FFFFFF;
+			}
+		}
+	}
+
+}

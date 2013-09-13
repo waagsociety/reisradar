@@ -1,0 +1,141 @@
+//responsible for styling messages and comments as a mixin
+
+@mixin message-base($header_color,$text_color,$text_status_color,$ruler_color,$name_color,$tag_color,$icon_path,$action_color,$background_color) {
+
+	color:$background_color;
+	font-family: "Helvetica";
+	
+	border-bottom-left-radius: $border_radius;
+	border-bottom-right-radius: $border_radius;
+	border-bottom: 1px solid $background_color;
+	border-right: 1px solid $background_color;
+	
+	border-left: 1px solid $background_color;
+	margin-left: 2em;
+	margin-right: 1em;
+	margin-bottom: 1em;
+
+	padding-left: $margin_default;
+	padding-right: $margin_default;
+	background-color: #ffffff;
+
+	div.message
+	{
+		position:relative;
+
+		div.message_title
+		{
+			font-size: 1.2em;
+
+			span.message_status_time
+			{
+				font-size: 0.5em;
+			}
+
+			span.message_status_loc
+			{
+				font-size: 0.5em;
+			}
+		}
+
+		div.message_body
+		{
+			font-size: 1em;
+			margin-right: 2em;
+		}
+
+		div.message_add_comment
+		{
+			position: absolute;
+			right: -.2em;
+			top: .5em;
+			svg
+			{
+				path
+				{
+					fill: $background_color;
+				}
+			}
+		}	
+	}
+
+	hr
+	{
+		display: block; 
+		height: 1px;
+		border: 0; 
+		border-top: 1px solid $background_color;/*baby blue*/
+		padding: 0;
+		margin: 0;
+		margin-bottom: $margin_default * 0.1;
+	}
+
+	div.comments
+	{
+		position: relative;
+		background-color: $header-color;
+		color:#ffffff;
+		font-family: "Helvetica";
+	
+		border-bottom-left-radius: $border_radius;
+		border-bottom-right-radius: $border_radius;
+		border-bottom: 1px solid transparent;
+		border-right: 1px solid transparent;
+		border-left: 1px solid transparent;
+
+		margin-top: 0;
+
+		padding-right: $margin_default;
+		padding-left: $margin_default;
+		
+		div.comment
+		{
+			div.comment_title
+			{
+				font-size: .8em;
+				
+				span.comment_status_time
+				{
+					font-size: .8em;
+				}
+			}
+			
+			div.comment_body
+			{
+				font-size: .8em;
+			}
+		}
+
+		hr
+		{
+			display: block; 
+			height: 1px;
+			border: 0; 
+			border-top: 1px solid $text-color;/*baby blue*/
+			padding: 0;
+		}
+
+		svg{
+			polyline	
+			{
+				stroke: $text-color;
+			}
+		}
+
+		div.commentCount
+		{
+			position: absolute;
+			font-size: .5em;
+			right: $margin_default * 2;
+			bottom: $margin_default * .75;
+		}
+
+	}
+
+	svg{
+		polyline	
+		{
+			stroke: $background-color;
+		}
+	}
+}

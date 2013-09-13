@@ -1,0 +1,64 @@
+//custom css for list
+$list-pressed-color: #66CCCC;
+.x-list {
+	
+	background-color: #ffffff;
+	
+	.x-list-item
+	{
+		padding-top: 1em;
+
+		div.name
+		{
+			font-family: 'Helvetica';
+			font-size: 1em;
+		}
+	}
+
+	.x-list-disclosure {
+		margin-top: 1em;
+		background-color: transparent;
+		border: 0;
+		right: 10px;
+		height: 40px;//increase hot zone
+		width: 40px;//increase hot zone
+
+		&:before {
+			content: '\e005';
+			font-family: 'icomoon';
+			color: #000000;
+			font-size: 24px;
+			text-align: center;
+			text-shadow: 0 0 0;
+		}
+	}
+
+	.x-list-item-odd {
+		&.x-list-item-tpl,
+		.x-dock-horizontal {
+			background-color: lighten($list-pressed-color, 20%) !important;
+		}
+	}
+
+	.x-item-selected .x-list-disclosure {
+		background-color: transparent;
+
+		&:before {
+			color: #ffffff;
+		}
+	}
+
+	.x-item-selected
+	{
+		color: #ffffff;
+		&.x-list-item-tpl,
+		.x-dock-horizontal {
+			background-color: $list-pressed-color !important;
+		}
+	}
+
+}
+
+
+
+
